@@ -13,6 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install prerequisites
+        run: sudo apt install libtbb
+
       - name: Configure and build
         run: |
           cmake . -B build
